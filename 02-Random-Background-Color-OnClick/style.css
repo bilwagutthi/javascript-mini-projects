@@ -1,0 +1,29 @@
+html {
+    width: 100px;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: white;
+}
+
+button {
+    outline:none;
+    color: black;
+    background-color: transparent;
+    height: 15vh;
+    width: 15vw;
+    border-style: solid;
+    border-radius: 15vh;
+    border-width: 1vh;
+    border-color: black;
+    position: absolute;
+    font-size: x-large;
+    font-weight: bolder;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
