@@ -1,0 +1,41 @@
+body{
+    background-color: darkblue;
+}
+
+.box{
+    
+    width: 90vw;
+    height: 90vh;
+    background-color: blueviolet;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1vw;
+}
+
+.start{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.light{
+    color: aqua;
+    background-color: green;
+    width: calc(90vw/8 - 2vw);
+    height: calc(90vw/8 - 2vw);
+    display: inline-block;
+    margin-top: 15vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 50%;
+    
+}
+
+.letterbox{
+    color:black;
+    font-size: 10vw;
+}
