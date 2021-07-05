@@ -1,0 +1,22 @@
+.grid{
+    width:400px;
+    height:600px;
+    background: linear-gradient(to bottom right, #cc99ff 0%, #ccffff 100%);
+    position: relative;
+    font-size:larger;
+    
+}
+
+.doodler{
+    width: 60px;
+    height: 85px;
+    background-color: red;
+    position: absolute;
+}
+
+.platform{
+    width: 85px;
+    height: 15px;
+    background-color: cornflowerblue;
+    position: absolute;
+}
