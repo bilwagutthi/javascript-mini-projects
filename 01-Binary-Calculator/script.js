@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     let isTyping= true
     let isComplete=false
     let firstNotDone= true
+    let oprAdd;
 
     var expression=""
 
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(firstNotDone && charCheck()){
             expression+="+"
             firstNotDone= false
+            oprAdd = true
         }
         updateDisplay()
     }
@@ -54,12 +56,37 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(firstNotDone && charCheck()){
             expression+="-"
             firstNotDone= false
+            oprAdd = false
         }
         updateDisplay()
     }
 
-    calc.onclick= () => {
+    function evaluateExp(){
+        let oprPos, ans, one , two;
+        if (oprAdd){
+            oprPos = expression.indexOf("+")
+        }
+        else{
+            oprPos= expression.indexOf("-")
+        }
+        one = parseInt(expression.substring(0,oprPos),2)
         
+        if(oprPos>= expression.length)
+        two = parseInt(expression.substring(oprPos+1),2)
+        else two = 0
+        
+        if (oprAdd) ans= one+two
+        else ans=Math.abs(one- two)
+        
+        return ans.toString(2)
+
+    }
+
+    calc.onclick= () => {
+        if(!firstNotDone && charCheck){
+        expression= evaluateExp()
+        }
+        updateDisplay()
     }
 
 })
