@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(oprPos>= expression.length)
         two = parseInt(expression.substring(oprPos+1),2)
         else two = 0
-        
+        console.log(oprPos, one , two);
         if (oprAdd) ans= one+two
         else ans=Math.abs(one- two)
-        
+        console.log(ans.toString(2),ans)
         return ans.toString(2)
 
     }
